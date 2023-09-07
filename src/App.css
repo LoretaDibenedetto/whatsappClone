@@ -12,5 +12,6 @@ background-color:lightgray;
 
 
 .app_body{
+display: flex;
 
 }
