@@ -1,13 +1,16 @@
 import logo from './logo.svg';
 import './App.css';
+import Sidebar from './sidebar/Sidebar';
+import Chat from './chat/Chat';
 
 function App() {
   return (
     <div className="app">
       <div className="app_body">
-
+      <Sidebar></Sidebar>
+      <Chat></Chat>
       </div>
-     <h1>Prova react</h1>
+     
     </div>
   );
 }
