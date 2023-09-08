@@ -3,8 +3,8 @@ import "./Sidebar.css";
 import ChatIcon from '@mui/icons-material/Chat';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
 import DonutLargeIcon from '@mui/icons-material/DonutLarge';
-
-import {Avatar, IconButton} from "@mui/material"
+import SearchIcon from "@mui/icons-material/SearchOutlined";
+import {Avatar, IconButton} from "@mui/material";
 
 function Sidebar() {
   return (
@@ -26,7 +26,14 @@ function Sidebar() {
         <MoreVertIcon></MoreVertIcon>
       </IconButton>
       </div>
+    
      </div>
+     <div className='sidebar_search'>
+      <div className='sidebar_container'>
+        <SearchIcon></SearchIcon>
+       <input type="text" placeholder='Cerca o inizia una nuova chat'></input>
+       </div>
+      </div>
  </div>
 
 
