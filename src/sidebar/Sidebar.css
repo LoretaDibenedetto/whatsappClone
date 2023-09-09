@@ -52,3 +52,9 @@ padding:10px;
  outline-width: 0;
   
 }
+
+.sidebar_chat{
+    flex:1;
+    background-color: white;
+    overflow: scroll;
+}
