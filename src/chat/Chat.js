@@ -1,11 +1,33 @@
 import React from 'react'
 import "./Chat.css";
+import { Avatar, IconButton } from '@mui/material';
+import { AttachFile, MoreVert, SearchOffOutlined } from '@mui/icons-material';
 
 function Chat() {
   return (
     <div className='chat'>
         <div className='chat_header'>
-        header
+       <Avatar></Avatar>
+       <div className='chat_header_info'>
+        <h3>Chat Name</h3>
+        <p>visto l'ultima...</p>
+       </div>
+
+      <div className='chat_header_right'>
+        <IconButton>
+          <SearchOffOutlined></SearchOffOutlined>
+          </IconButton>
+        <IconButton>
+          <AttachFile>
+
+          </AttachFile>
+        </IconButton>
+        <IconButton>
+          <MoreVert></MoreVert>
+        </IconButton>
+
+      </div>
+
         </div>
         <div className='chat_body'>
         body
