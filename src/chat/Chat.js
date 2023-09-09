@@ -30,7 +30,10 @@ function Chat() {
 
         </div>
         <div className='chat_body'>
-        body
+        <p className='chat_message'>
+          <span className='chat_name'>Mio Nome</span>
+          <span className='chat_timestamp'>{new Date().toUTCString()}</span>
+        </p>
         </div>
         <div className='chat_footer'>
         footer
