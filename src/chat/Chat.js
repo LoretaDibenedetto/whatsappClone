@@ -1,7 +1,7 @@
 import React from 'react'
 import "./Chat.css";
-import { Avatar, IconButton } from '@mui/material';
-import { AttachFile, MoreVert, SearchOffOutlined } from '@mui/icons-material';
+import { Avatar, Button, IconButton } from '@mui/material';
+import { AttachFile, EmojiEmotions, MoreVert, SearchOffOutlined, SearchOutlined } from '@mui/icons-material';
 
 function Chat() {
   return (
@@ -32,11 +32,23 @@ function Chat() {
         <div className='chat_body'>
         <p className='chat_message'>
           <span className='chat_name'>Mio Nome</span>
+          messaggio
+          <span className='chat_timestamp'>{new Date().toUTCString()}</span>
+        </p>
+        <p className='chat_message chat_recever'>
+          <span className='chat_name'>Mio Nome</span>
+          messaggio
           <span className='chat_timestamp'>{new Date().toUTCString()}</span>
         </p>
         </div>
         <div className='chat_footer'>
-        footer
+        <IconButton>
+          <EmojiEmotions></EmojiEmotions>
+        </IconButton>
+        <form>
+          <input placeholder='scrivi un messaggio..' type="text"></input>
+          <Button type='submit'></Button>
+        </form>
         </div>
     </div>
   )
