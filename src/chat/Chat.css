@@ -1,0 +1,28 @@
+.chat{
+display: flex;
+flex-direction: column;
+flex:0.65;
+}
+.chat_header{
+padding: 20px;
+display: flex;
+align-items: center;
+border-bottom: 1px solid lightgray;
+}
+.chat_body{
+flex:1;
+padding: 30px;
+overflow: scroll;
+background-image: url("https://i.pinimg.com/originals/8c/98/99/8c98994518b575bfd8c949e91d20548b.jpg");
+background-repeat: repeat;
+background-position: center;
+background-size: contain;
+}
+
+.chat_footer{
+display: flex;
+justify-content: space-between;
+align-items: center;
+height: 62px;
+border-top: 1px solid lightgray;
+}
