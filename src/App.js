@@ -7,8 +7,10 @@ import { useEffect, useState } from 'react';
 import { cleanup } from '@testing-library/react';
 import axios from "./axios";
 
+
+
 function App() {
-  const [count, setCount] = useState(56);
+ 
   const [messages, setMessages] = useState([]);
 
  useEffect(()=>{
@@ -46,7 +48,7 @@ function App() {
   
       <div className="app_body">
       <Sidebar></Sidebar>
-      <Chat messages={messages}></Chat>
+      <Chat messages={messages}/>
       </div>
      
     </div>

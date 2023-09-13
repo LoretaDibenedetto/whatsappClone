@@ -3,7 +3,7 @@ import "./Chat.css";
 import { Avatar, Button, IconButton } from '@mui/material';
 import { AttachFile, EmojiEmotions, MoreVert, SearchOffOutlined, SearchOutlined } from '@mui/icons-material';
 
-function Chat() {
+function Chat({ messages }) {
   return (
     <div className='chat'>
         <div className='chat_header'>
@@ -30,16 +30,15 @@ function Chat() {
 
         </div>
         <div className='chat_body'>
-        <p className='chat_message'>
-          <span className='chat_name'>Mio Nome</span>
-          messaggio
-          <span className='chat_timestamp'>{new Date().toUTCString()}</span>
-        </p>
-        <p className='chat_message chat_recever'>
-          <span className='chat_name'>Mio Nome</span>
-          messaggio
-          <span className='chat_timestamp'>{new Date().toUTCString()}</span>
-        </p>
+        {messages.map((message) => {
+        return (
+                <p className={`chat_message ${message.received && "chat_recever"} `}>
+                  <span className='chat_name'>{message.name}</span>
+                  {message.message} {/* Utilizza la proprietà 'text' del messaggio qui */}
+                  <span className='chat_timestamp'>{message.timestamp}</span>
+                </p>
+              );
+            })}
         </div>
         <div className='chat_footer'>
         <IconButton>
