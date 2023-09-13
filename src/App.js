@@ -13,10 +13,13 @@ function App() {
 
  useEffect(()=>{
   axios.get("/api/v1/messages/sync")
-  .then((response)=>{
+ .then(function(response) {
     console.log(response.data);
-  }).catch();
-})
+    setMessages(response.data);
+}).catch((err) => {
+    console.log(err)
+});
+},[])
 
 
   useEffect(() =>{
@@ -43,7 +46,7 @@ function App() {
   
       <div className="app_body">
       <Sidebar></Sidebar>
-      <Chat></Chat>
+      <Chat messages={messages}></Chat>
       </div>
      
     </div>
